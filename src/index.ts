@@ -1,10 +1,12 @@
-export type TemplateLibraryOptions = {
-  debug?: boolean
+export type TemplateLibraryOptionsType = {
+  isDebug?: boolean
 }
 
-export function createTemplateLibrary(options: TemplateLibraryOptions = {}): TemplateLibraryOptions {
+export function createTemplateLibrary(
+  options: TemplateLibraryOptionsType = {},
+): TemplateLibraryOptionsType {
   return {
-    debug: false,
+    isDebug: false,
     ...options,
   }
 }
