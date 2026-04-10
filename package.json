@@ -1,0 +1,49 @@
+{
+  "name": "@infinityloop.labs/frontend-vite-lib-template",
+  "version": "0.1.0",
+  "description": "Template for frontend libraries built with Vite and TypeScript",
+  "private": false,
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "test": "vitest run"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "template",
+    "vite",
+    "typescript",
+    "frontend",
+    "library"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react-swc": "^3.4.0",
+    "jsdom": "^22.1.0",
+    "typescript": "^5.9.2",
+    "vite": "^4.5.0",
+    "vite-plugin-dts": "^3.6.1",
+    "vitest": "^0.34.6"
+  },
+  "peerDependencies": {
+    "react": "19.X.X",
+    "react-dom": "19.X.X"
+  }
+}
